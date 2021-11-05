@@ -7,7 +7,7 @@ const Profile = () => {
        localStorage.setItem('Login User',JSON.stringify({user}))
     }
     const[data,setData]=useState(JSON.parse( localStorage.getItem('Login User')))
-    console.log(data,'data',isAuthenticated)
+    console.log(data,'data','isAuthenticated :',isAuthenticated)
     return (
         <>
         {data && (<div>
