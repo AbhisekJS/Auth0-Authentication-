@@ -9,12 +9,15 @@ const Profile = () => {
     const[data,setData]=useState(JSON.parse( localStorage.getItem('Login User')))
     console.log(data,'data',isAuthenticated)
     return (
-        data && (<div>
+        <>
+        {data && (<div>
             <img src={data?.user?.picture} alt=""/>
             <h2>{data?.user?.name}</h2>
             <p>{data?.user?.email}</p>
+            <p>{data?.user.sub.split("|")[1]}</p>
             <JSONPretty data={user}/>
-        </div>)
+        </div>)}
+        </>
     )
 }
 
